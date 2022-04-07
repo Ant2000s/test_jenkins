@@ -5,18 +5,25 @@ properties([disableConcurrentBuilds()])
 pipeline {
     agent any
     options {
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        buildDiscarder(logRotator(numToKeepStr: '3', artifactNumToKeepStr: '3'))
         timestamps()
     }
     stages {
         stage("create docker image") {
             steps {
-                echo "_____________start_____________"
+                echo "_____________start create_____________"
                 dir ('docker') {
-                    sh 'docker build .'
+                    sh 'docker build -t cloud-native-practice-gontainer:1 -f Dockerfile .'
                 }
-            }
-            
+            }  
+        }
+        stage("run docker image") {
+            steps {
+                echo "_____________start run_____________"
+                dir ('docker') {
+                    sh 'docker run -it -p 94:94 cloud-native-practicegontainer:1'
+                }
+            }  
         }
     }
 }
