@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo "_____________start run_____________"
                 dir ('docker') {
-                    sh 'docker run -i -p 94:94 cloud-native-practicegontainer:1'
+                    sh 'docker run -i -p 94:94 cloud-native-practice-gontainer:1'
                 }
             }  
         }
