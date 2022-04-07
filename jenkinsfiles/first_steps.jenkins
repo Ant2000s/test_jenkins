@@ -10,7 +10,7 @@ pipeline {
 		timestamps()
 	}
     stages {
-		stage("first step") {
+		stage("test") {
 			steps {
 				hostname
 			}
