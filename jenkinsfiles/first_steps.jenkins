@@ -15,10 +15,10 @@ pipeline {
         stage("create docker image") {
             steps {
                 echo "_____________start create_____________"
-                dir ('docker') {
+                //dir ('docker') {
                     //sh 'docker build -t cloud-native-practice-gontainer:1 -f Dockerfile .'
                     sh 'node  --version'
-                }
+                //}
             }  
         }
         /*stage("run docker image") {
