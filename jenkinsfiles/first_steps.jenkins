@@ -3,10 +3,7 @@
 properties([disableConcurrentBuilds()])
 
 pipeline {
-    agent {     dockerfile {
-      filename 'Dockerfile'
-      dir '/docker'
-    } }
+    agent { dockerfile true }
     options {
         buildDiscarder(logRotator(numToKeepStr: '3', artifactNumToKeepStr: '3'))
         timestamps()
