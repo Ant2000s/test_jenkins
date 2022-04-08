@@ -4,8 +4,8 @@ properties([disableConcurrentBuilds()])
 
 pipeline {
     agent {     dockerfile {
-      customWorkspace '/docker'
       filename 'Dockerfile'
+      dir '/docker'
     } }
     options {
         buildDiscarder(logRotator(numToKeepStr: '3', artifactNumToKeepStr: '3'))
