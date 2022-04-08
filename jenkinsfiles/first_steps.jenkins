@@ -11,11 +11,8 @@ pipeline {
     stages {
         stage("create docker image") {
             steps {
-                echo "_____________start create_____________"
-                //dir ('docker') {
-                    //sh 'docker build -t cloud-native-practice-gontainer:1 -f Dockerfile .'
-                    sh 'node  --version'
-                //}
+                echo "_____________start_____________"
+                    sh 'ls'
             }  
         }
         /*stage("run docker image") {
