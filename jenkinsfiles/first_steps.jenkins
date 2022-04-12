@@ -13,6 +13,7 @@ pipeline {
             steps {
                 echo "_____________start_____________"
                     sh 'ls'
+                    sh 'curl 192.168.1.200:8080'
             }  
         }
         /*stage("run docker image") {
