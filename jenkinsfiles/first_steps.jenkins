@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo "_____________start_____________"
                     sh 'ls'
-                    sh 'curl localhost:8080'
+                    sh 'cat files/hello.txt'
             }  
         }
         /*stage("run docker image") {
