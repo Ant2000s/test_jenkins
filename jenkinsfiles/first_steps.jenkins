@@ -16,7 +16,9 @@ pipeline {
                     sh 'cat files/hello.txt'
                     sh 'chmod +x ./test'
                     sh 'ls'
-                    sh './test'
+                    sh 'curl localhost:129'
+                    sh 'curl localhost:136'
+                    //sh './test'
             }  
         }
     }
