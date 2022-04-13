@@ -12,9 +12,9 @@ pipeline {
         stage("create docker image") {
             steps {
                 echo "_____________start_____________"
-                    sh 'ls'
                     sh 'cat files/hello.txt'
                     sh 'chmod +x ./test'
+                    sh 'ls'
                     sh './test'
             }  
         }
