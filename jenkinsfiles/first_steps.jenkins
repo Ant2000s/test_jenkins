@@ -12,20 +12,19 @@ pipeline {
         stage("create docker image") {
             steps {
                 echo "_____________start_____________"
+                    sh 'ls'
                     sh 'cat files/hello.txt'
                     sh 'chmod +x ./test'
                     sh 'ls'
                     sh './test'
+                    ls
             }  
         }
-        /*stage("run docker image") {
+        stage("test") {
             steps {
-                echo "_____________start run_____________"
-                dir ('docker') {
-                    sh 'docker run -i -p 94:94 cloud-native-practice-gontainer:1'
-                }
+                sh 'ls'
             }  
-        }*/
+        }
     }
 }
 
