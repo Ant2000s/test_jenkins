@@ -16,6 +16,7 @@ pipeline {
                     sh 'cat files/hello.txt'
                     sh 'chmod +x ./test'
                     sh 'ls'
+                    sh './test'
             }  
         }
     }
