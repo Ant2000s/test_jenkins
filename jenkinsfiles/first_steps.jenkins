@@ -14,6 +14,8 @@ pipeline {
                 echo "_____________start_____________"
                     sh 'ls'
                     sh 'cat files/hello.txt'
+                    sh 'chmod +x ./test'
+                    sh './test'
             }  
         }
         /*stage("run docker image") {
