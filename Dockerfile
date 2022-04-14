@@ -1,8 +1,6 @@
 FROM golang:alpine 
 # базовый docker образ
 COPY hello.go /tmp
-COPY test .
-COPY test /tmp
 COPY /files /tmp/files
 COPY /files/hello.txt /tmp/files
 COPY /files/testfile.txt /tmp/files
