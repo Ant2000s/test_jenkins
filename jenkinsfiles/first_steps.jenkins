@@ -14,10 +14,6 @@ pipeline {
                 echo "_____________start_____________"
                     sh 'ls'
                     sh 'cat files/hello.txt'
-                    sh 'chmod +x ./test'
-                    sh 'ls'
-                    sh 'curl localhost:129'
-                    sh 'curl localhost:136'
                     //sh './test'
             }  
         }
